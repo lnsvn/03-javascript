@@ -1,10 +1,13 @@
-*,
-*::before,
-*::after {
+:root {
+  --white: hsl(0, 0%, 100%);
+  --dark-gray: hsl(206, 17%, 28%);
+  --light-gray: #e7e9eb;
+}
+
+* {
   box-sizing: border-box;
 }
 
-html,
 body,
 .wrapper {
   height: 100%;
@@ -18,24 +21,22 @@ body {
 }
 
 .wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 30px 20px 0px 20px;
 }
 
 header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--dark-gray);
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--dark-gray);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -46,7 +47,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--light-gray);
   height: 2px;
 }
 
@@ -62,7 +63,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--light-gray);
   height: 2px;
 }
 
@@ -78,7 +79,7 @@ header {
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -88,13 +89,9 @@ header {
   cursor: pointer;
 }
 
-button[disabled] {
+button:focus {
   cursor: default;
   background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
 }
 
 #password {
@@ -104,14 +101,10 @@ button[disabled] {
   border: none;
   display: block;
   width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
+  padding: 15px 15px 85px 15px;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0px 10px 0px;
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
   resize: none;
