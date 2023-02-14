@@ -1,130 +1,154 @@
+/* Variables that can be called in any of the selectors in the document */
 :root {
   --white: hsl(0, 0%, 100%);
   --dark-gray: hsl(206, 17%, 28%);
   --light-gray: #e7e9eb;
 }
 
+/* Applied to all */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* include the padding and border in an element's total width and height */
 }
+
+/* Start body */
 
 body,
 .wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100%; /* sets the height of the body and .wrapper */
+  margin: 0; /* sets the margin of the body and .wrapper */
+  padding: 0; /* sets the padding of the body and .wrapper */
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: sans-serif; /* sets the font type of the body */
+  background-color: #f9fbfd; /* sets the background color of the body */
 }
+
+/* Start div */
 
 .wrapper {
-  padding: 30px 20px 0px 20px;
+  padding: 30px 20px 0px 20px; /* sets the padding of the div */
 }
+
+/* Start header */
 
 header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: var(--dark-gray);
+  text-align: center; /* aligns the text in the header */
+  padding: 20px; /* adds padding to the header */
+  padding-top: 0px; /* subtracts the padding to the header */
+  color: var(--dark-gray); /* sets a text color to the header */
 }
 
+/* End header */
+
+/* Start main */
+
+/* Start sections */
+
 .card {
-  background-color: var(--white);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: var(--dark-gray);
-  font-size: 18px;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 40px;
+  background-color: var(--white); /* adds background color to .card */
+  border-radius: 5px; /* applies border radius to .card */
+  border-width: 1px; /* sets width of border */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px; /* adds shadow to .card and sets parameters */
+  color: var(--dark-gray); /* sets text color to .card */
+  font-size: 18px; /* sets font size to .card */
+  margin: 0 auto; /* adds margin to .card */
+  max-width: 800px; /* sets the max width to .card */
+  padding: 30px 40px; /* adds padding to .card */
 }
 
 .card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: var(--light-gray);
-  height: 2px;
+  content: " "; /* adds content after .card-header */
+  display: block; /* after .card-header starts on a new line and takes up the available screen width */
+  width: 100%; /* sets width after .card-header */
+  background: var(--light-gray); /* sets background color after .card-header */
+  height: 2px; /* sets height after .card-header */
 }
 
 .card-body {
-  min-height: 100px;
-}
-
-.card-footer {
-  text-align: center;
-}
-
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: var(--light-gray);
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: var(--white);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
-}
-
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
+  min-height: 100px; /* sets the minimum height of the card body */
 }
 
 #password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding: 15px 15px 85px 15px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 10px 0px 10px 0px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
+  -webkit-appearance: none; /* hidden */
+  -moz-appearance: none; /* hidden */
+  appearance: none; /* allows redefining of default appearance */
+  border: none; /* removes border from #password */
+  display: block; /* #password starts on a new line and takes up the available screen width */
+  width: 100%; /* sets #password width */
+  padding: 15px 15px 85px 15px; /* adds padding to #password */
+  font-size: 1.2rem; /* sets font size of #password */
+  text-align: center; /* aligns text in #password */
+  margin: 10px 0px 10px 0px; /* adds margin to #password */
+  border: 2px dashed #c0c7cf; /* adds border to #password and sets properties */
+  border-radius: 6px; /* adds radius to border */
+  resize: none; /* disables user resizing of #password */
+  overflow: hidden; /* prevents overflow from rendering outside #password */
 }
 
+.card-footer::before {
+  content: " "; /* adds content before .card-footer */
+  display: block; /* before .card-footer starts on a new line and takes up the available screen width */
+  width: 100%; /* sets the width before .card-footer */
+  background: var(--light-gray); /* adds background color before .card-footer */
+  height: 2px; /* sets height before .card-footer */
+}
+
+.card-footer {
+  text-align: center; /* aligns text of .card-footer*/
+}
+
+.card-footer::after {
+  content: " "; /* adds content after .card-footer */
+  display: block; /* after .card-footer starts on a new line and takes up the available screen width */
+  clear: both; /* elements are not allowed to float on both sides */
+}
+
+/* The button being disabled means these changes will not occur */
+button[disabled] {
+  cursor: default; 
+  background: #c0c7cf; 
+}
+
+.btn {
+  border: none; /* applies no border to .btn */
+  background-color: hsl(360, 91%, 36%); /* sets background color of .btn */
+  border-radius: 25px; /* adds border radius to .btn */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px; /* adds shadow to .btn */
+  color: var(--white); /* sets text color of .btn */
+  display: inline-block; /* text is horizontal */
+  font-size: 22px; /* sets font size of .btn */
+  line-height: 22px; /* sets the line height of .btn */
+  margin: 16px 16px 16px 20px; /* adds margin to .btn */
+  padding: 14px 34px; /* adds padding to .btn */
+  text-align: center; /* aligns .btn text */
+  cursor: pointer; /* */
+}
+
+/* End sections */
+
+/* End main */
+
+/* End div */
+
+/* End body */
+
+/* Applies changes when the viewport size changes */
 @media (max-width: 690px) {
   .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
+    font-size: 1rem; /* changes the font size of .btn */
+    margin: 16px 0px 0px 0px; /* changes the margin for .btn */
+    padding: 10px 15px; /* changes the padding for .btn */
   }
 
   #password {
-    font-size: 1rem;
+    font-size: 1rem; /* changes the font size of #password */
   }
 }
 
 @media (max-width: 500px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* changes the font size of .btn */
   }
 }
