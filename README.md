@@ -58,7 +58,7 @@ The Finished Site at 690px viewport:
 The Finished Site at 500px viewport:
 ![alt text](assets/images/500.png)
 
-Finished Site Link: 
+Finished Site Link: https://lnsvn.github.io/03-javascript/ 
 
 ## Credits
 
